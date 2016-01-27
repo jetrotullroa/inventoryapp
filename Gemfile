@@ -14,6 +14,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "slim-rails"
 gem 'bootstrap-sass'
 
+#for app use
+gem 'paper_trail'
+
+
+
 
 group :development do
   gem 'guard-rspec', require: false
