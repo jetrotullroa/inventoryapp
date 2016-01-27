@@ -12,6 +12,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
   end
 
+  def add_amount
+    
+  end
+
 
   private
 

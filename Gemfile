@@ -18,8 +18,6 @@ gem 'bootstrap-sass'
 gem 'paper_trail'
 
 
-
-
 group :development do
   gem 'guard-rspec', require: false
   gem 'rubocop', :require => false
