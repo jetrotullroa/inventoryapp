@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#category seed
+
+@category1 = Category.create!(name: "Box", id: 1)
+@category2 = Category.create!(name: "Tape", id: 2)
+@category3 = Category.create!(name: "Sticker", id: 3)
+@category4 = Category.create!(name: "Form", id: 4)
+@category4 = Category.create!(name: "Office Equipment", id: 5)
+@category4 = Category.create!(name: "Others", id: 6)
