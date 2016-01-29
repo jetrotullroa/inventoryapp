@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+  before_action set_item: :edit
+
   def index
     @items = Item.all
   end
@@ -10,10 +12,18 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    render :index
   end
 
-  def add_amount
-    
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to items_path
+    else
+      render :edit, :flash => { :error => "Failed to save Item" }
+    end
   end
 
 
@@ -21,6 +31,10 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:name, :category, :amount)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end

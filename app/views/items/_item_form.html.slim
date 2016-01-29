@@ -1,0 +1,12 @@
+.container
+  .col-xs-12
+  h1 Form
+
+.container
+    .col-xs-12
+      = simple_form_for(@item, html: { class: 'form-horizontal' }) do |f|
+        = f.input :name
+        = f.input :category
+        = f.input :amount
+        
+        = f.button :submit
